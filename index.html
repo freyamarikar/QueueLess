@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QueueLess helps you join virtual queues and save waiting time.">
+  <title>QueueLess | Skip the Wait</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#"><span class="brand-icon">Q</span> QueueLess</a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#how-it-works">How it works</a>
+    </nav>
+    <a href="#services" class="nav-button">Join a Queue ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> YOUR TIME MATTERS</div>
+        <h1>Less waiting.<br>More <span>living.</span></h1>
+        <p class="hero-text">Your time is too valuable to spend in a queue. Get your virtual token, track your position, and arrive when it is your turn.</p>
+        <a href="#services" class="primary-button">Find a service <span>→</span></a>
+        <div class="hero-note"><span>✓</span> Free to use &nbsp;·&nbsp; No physical queue needed</div>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="ticket-card">
+          <div class="ticket-top"><span class="mini-logo">Q</span><span class="status"><span class="live-dot"></span> LIVE QUEUE</span></div>
+          <p class="ticket-label">YOUR TOKEN NUMBER</p>
+          <div class="ticket-number">A<span>024</span></div>
+          <div class="ticket-divider"></div>
+          <div class="ticket-stats">
+            <div><span class="stat-label">YOUR POSITION</span><strong id="demo-position">04 <small>in line</small></strong></div>
+            <div><span class="stat-label">EST. WAIT</span><strong id="demo-wait">12 <small>min</small></strong></div>
+          </div>
+          <div class="progress-track"><div class="progress-fill"></div></div>
+          <p class="ticket-footer">We'll keep your place in line.</p>
+        </div>
+        <div class="floating-card"><span class="check-icon">✓</span><div><strong>You're all set!</strong><small>Your time is yours again.</small></div></div>
+        <div class="visual-caption">YOUR PLACE. YOUR PACE.</div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div><strong>01</strong><span>Choose your service</span></div>
+      <div><strong>02</strong><span>Get your token</span></div>
+      <div><strong>03</strong><span>Track your turn</span></div>
+      <div><strong>04</strong><span>Skip the waiting room</span></div>
+    </section>
+
+    <section class="services-section" id="services">
+      <div class="section-heading">
+        <div><p class="eyebrow">MADE FOR EVERYDAY LIFE</p><h2>Your time, <span>your choice.</span></h2></div>
+        <p>Choose a service to try the QueueLess demo.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-icon clinic">✚</div>
+          <span class="service-tag">HEALTHCARE</span>
+          <h3>Clinics</h3>
+          <p>Spend less time waiting to see a doctor.</p>
+          <div class="service-bottom"><span>Demo queue</span><button class="join-button" data-service="Clinic">Get token ↗</button></div>
+        </article>
+        <article class="service-card">
+          <div class="service-icon salon">✂</div>
+          <span class="service-tag">PERSONAL CARE</span>
+          <h3>Salons & Barbers</h3>
+          <p>Know when your chair is ready.</p>
+          <div class="service-bottom"><span>Demo queue</span><button class="join-button" data-service="Salon">Get token ↗</button></div>
+        </article>
+        <article class="service-card">
+          <div class="service-icon office">▤</div>
+          <span class="service-tag">PUBLIC SERVICES</span>
+          <h3>Service Centers</h3>
+          <p>Make errands easier, without the long line.</p>
+          <div class="service-bottom"><span>Demo queue</span><button class="join-button" data-service="Service Center">Get token ↗</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <p class="eyebrow">SIMPLE BY DESIGN</p>
+      <h2>Waiting is <span>optional.</span></h2>
+      <div class="how-grid">
+        <div><span class="step-number">01</span><h3>Pick a service</h3><p>Choose where you need to go.</p></div>
+        <div><span class="step-number">02</span><h3>Claim your spot</h3><p>Receive a virtual token number.</p></div>
+        <div><span class="step-number">03</span><h3>Go at your pace</h3><p>Check your position before arriving.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-icon">Q</span> QueueLess</a><span>Less waiting. More living.</span><span>Virtual queue demo · 2026</span></footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="close-modal" aria-label="Close">×</button>
+      <p class="eyebrow">YOUR VIRTUAL TOKEN</p>
+      <h2 id="modal-title">You're in line!</h2>
+      <p id="modal-service" class="modal-service"></p>
+      <div class="modal-ticket"><span>YOUR TOKEN</span><strong id="token-number">A001</strong><div id="token-position">Position: 1</div><div id="token-wait">Estimated wait: 3 minutes</div></div>
+      <p class="modal-note">This is a local demo. Your token is not sent to a real service provider.</p>
+      <button class="primary-button modal-done" id="done-modal">Got it</button>
+    </div>
+  </div>
+</body>
+</html>
